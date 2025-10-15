@@ -1,0 +1,453 @@
+/* ------------------ Global Reset & Base ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Georgia', serif;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* ------------------ Headings ------------------ */
+h1, h2, h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f5b380;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------ Containers ------------------ */
+.container {
+    background: rgba(40, 40, 40, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 50px auto 0;
+    max-width: 90%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------ Links ------------------ */
+a {
+    color: #f5b380;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+a:hover {
+    color: #fff;
+    background-color: #333;
+    text-decoration: underline;
+}
+
+/* ------------------ Buttons ------------------ */
+button, input[type="submit"] {
+    background-color: #f5b380;
+    color: #2e2e2e;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 1px solid #f5b380;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover, input[type="submit"]:hover {
+    background-color: #333;
+    color: #f5b380;
+}
+
+/* ------------------ Form Fields (Global) ------------------ */
+input[type="text"],
+textarea,
+select {
+    background-color: rgb(240, 239, 239);
+    color: #fff;
+    border: 2px solid #f5b380;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #ffbe94;
+}
+
+/* Apply padding within form <table> layout */
+form table th {
+    color: #f5b380;
+    text-align: right;
+    padding: 12px 16px;
+    vertical-align: top;
+    text-transform: uppercase;
+}
+form table td {
+    padding: 12px 0;
+}
+
+/* ------------------ Search Bar ------------------ */
+/* Group the dropdown and input visually */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+/* Dropdown container */
+.searchdrop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    color: #f5b380;
+}
+
+/* The dropdown itself */
+.searchdrop select {
+    padding: 10px;
+    border: 2px solid #f5b380;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+    color: #f5b380;
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+/* Search bar container */
+.searchbar {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Search input */
+.searchbar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #f5b380;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+    color: #f5b380;
+    font-size: 16px;
+    font-family: Georgia, serif;
+}
+
+/* Search button */
+.searchbar button {
+    padding: 10px 20px;
+    background-color: #f5b380;
+    border: none;
+    border-radius: 8px;
+    color: #1f1f1f;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.searchbar button:hover {
+    background-color: #ffffff;
+    color: #333;
+}
+
+
+
+/* ------------------ Category Grid ------------------ */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.category {
+    background: rgba(50, 50, 50, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1 1 22%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.category h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f5b380;
+}
+.category a {
+    font-size: 20px;
+    color: #282828;
+    background: #f5b380;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: bold;
+    border: 2px solid #f5b380;
+    transition: 0.3s ease;
+}
+.category a:hover {
+    background: #333;
+    color: #f5b380;
+}
+.category a:active {
+    background: black;
+}
+
+/* ------------------ Table Styling ------------------ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #444;
+    font-size: 16px;
+}
+table th {
+    background-color: #333;
+    color: #f5b380;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+table tr:nth-child(even) {
+    background-color: rgba(50, 50, 50, 0.8);
+}
+table tr:hover {
+    background-color: rgba(70, 70, 70, 0.8);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* ------------------ Responsive Design ------------------ */
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 28px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .categories {
+        flex-direction: column;
+    }
+    .category {
+        width: 80%;
+    }
+    .searchbar {
+        flex-direction: column;
+        width: 100%;
+    }
+    .searchbar input[type="text"],
+    .searchbar button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 24px;
+    }
+    .container {
+        padding: 15px;
+    }
+    .category {
+        width: 100%;
+    }
+    .category a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+form table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+form table td input,
+form table td textarea,
+form table td select {
+    width: 100%;
+    max-width: none;
+}
+
+form table th,
+form table td {
+    vertical-align: top;
+    padding: 10px 16px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    form table,
+    form table input,
+    form table textarea,
+    form table select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    form table th,
+    form table td {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    form table th {
+        margin-top: 20px;
+    }
+}
+/* Style radio buttons and their labels */
+input[type="radio"] {
+    accent-color: #f5b380;
+    transform: scale(1.3);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+/* Unified input styling for all form field types */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    background-color: rgb(240, 239, 239);
+    color: black;
+    border: 2px solid #f5b380;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ffbe94;
+}
+.rental-filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 300px; /* ⬅️ Makes the whole filter bar narrower */
+    margin-left: auto; /* ⬅️ Pushes the block to the right */
+    margin-top: 0%;
+}
+.rental-filter select,
+.rental-filter button {
+    padding: 8px 12px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid #f5b380;
+    background-color: #1f1f1f;
+    color: #f5b380;
+}
+
+.rental-filter button {
+    border: none;
+    background-color: #f5b380;
+    color: #1f1f1f;
+    cursor: pointer;
+}
+
+.rental-filter button:hover {
+    background-color: #fff;
+    color: #333;
+}
+input[type="submit"] {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 20px; /* optional spacing from the table */
+}
+h4 {
+    text-align: left;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+h4 a {
+    display: inline-block;
+    color: #f5b380;
+    background-color: #1f1f1f;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 2px solid #f5b380;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+h4 a:hover {
+    background-color: #f5b380;
+    color: #1f1f1f;
+    text-decoration: underline;
+}
+.container table {
+    width: 95%;
+    margin: 30px auto 0;
+    max-width: 1200px;
+}
+.autocomplete-results {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    background: #2e2e2e;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    position: absolute;
+    width: 400px;
+}
+
+.autocomplete-results li {
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.autocomplete-results li:hover {
+    background-color: #f5b380;
+    color: #1f1f1f;
+}
