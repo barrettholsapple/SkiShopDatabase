@@ -26,11 +26,11 @@ SQL – data querying and manipulation
 
 Designed a relational schema to store:
 
-  Customer information
+  - Customer information
 
-  Equipment inventory
+  - Equipment inventory
 
-  Rental transactions
+  - Rental transactions
 
 Implemented primary and foreign keys to maintain data integrity
 
@@ -39,39 +39,39 @@ Structured tables to support efficient querying and future scalability
 
 **Application Features:**
 
-Add, view, and manage customer records
+- Add, view, and manage customer records
 
-Track ski and snowboard rentals and returns
+- Track ski and snowboard rentals and returns
 
-Search and retrieve rental history
+- Search and retrieve rental history
 
-Employee-facing interface focused on usability and error reduction
+- Employee-facing interface focused on usability and error reduction
 
-Data stored in a centralized MySQL database for consistency
+- Data stored in a centralized MySQL database for consistency
 
 
 **What I Learned:**
 
-How to translate real-world business processes into a relational database model
+- How to translate real-world business processes into a relational database model
 
-Practical experience designing and querying SQL databases
+- Practical experience designing and querying SQL databases
 
-Integrating PHP with MySQL for dynamic data-driven applications
+- Integrating PHP with MySQL for dynamic data-driven applications
 
-Thinking about usability and data accuracy from an employee’s perspective
+- Thinking about usability and data accuracy from an employee’s perspective
 
-The importance of clean data organization for operational decision-making
+- The importance of clean data organization for operational decision-making
 
 
 **Future Improvements:**
 
-Role-based access for employees
+- Role-based access for employees
 
-Improved search and filtering functionality
+- Improved search and filtering functionality
 
-Analytics dashboards to summarize rental trends
+- Analytics dashboards to summarize rental trends
 
-Migration from local deployment to a hosted environment
+- Migration from local deployment to a hosted environment
 
 **Notes**
 
