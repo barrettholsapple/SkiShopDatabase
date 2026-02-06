@@ -73,6 +73,6 @@ Analytics dashboards to summarize rental trends
 
 Migration from local deployment to a hosted environment
 
-📎 Notes
+**Notes**
 
 This project is a personal, ongoing build inspired by real operational challenges. It is not currently deployed in a production environment but serves as a foundation for further development and experimentation.
